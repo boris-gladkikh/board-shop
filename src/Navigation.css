@@ -1,0 +1,23 @@
+nav {
+  padding: 2rem;
+}
+nav a {
+  color: white;
+  transition: 200ms ease-in;
+}
+
+nav a.active {
+  font-weight:bold;
+  border-bottom: 3px solid white;
+
+
+}
+
+nav a:hover {
+  color: orange;
+  font-weight:bold;
+
+  text-decoration: none;
+  /* border-bottom: 3px solid orange; */
+
+}
