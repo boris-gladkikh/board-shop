@@ -7,9 +7,9 @@ import './Navigation.css'
 
 function Navigation() {
   return (
-    <Navbar className="bg-dark ">
+    <Navbar className="bg-dark  ">
       <Navbar.Brand className="text-white" href="/">FS</Navbar.Brand>
-      <Nav  className="justify-content-end">
+      <Nav className="ml-auto">
         <Nav.Item className="mx-2">
           <NavLink exact to="/">HOME</NavLink>
         </Nav.Item>
@@ -19,10 +19,11 @@ function Navigation() {
         <Nav.Item className="mx-2">
           <NavLink to="/contact">CONTACT</NavLink>
         </Nav.Item>
-        <Nav.Item className="mx-2">
+        <Nav.Item className="mx-2 justify-content-end">
           <NavLink to="/cart">MY CART</NavLink>
         </Nav.Item>
       </Nav>
+      
     </Navbar>
   )
 }
