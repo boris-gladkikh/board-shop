@@ -1,0 +1,9 @@
+.review-box {
+  color:white;
+  background-color: #292b2c;
+  height: 6rem;
+  margin-top: 8px;
+  padding: 5px;
+  box-shadow: 2px 2px 2px black;
+  overflow:scroll;
+}
