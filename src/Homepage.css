@@ -1,3 +1,53 @@
 .home-box{
   min-height: 50vh;
 }
+
+.header-box {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.header-image {
+  max-width: 100%;
+  filter: brightness(50%);
+
+
+}
+
+.header-text {
+  color: white;
+  max-width: max-content;
+  padding-left: 5px;
+  padding-right: 5px;
+  /* border: 1px solid white; */
+  z-index: 2;
+  position: absolute;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 30%;
+  font-family: 'Alata', sans-serif;
+}
+
+.header-text h1 {
+  font-size: 5rem;
+}
+
+@media only screen and (max-width: 800px) {
+
+  .header-text h1 {
+    font-size: 2rem;
+  }
+}
+
+
+
+
+
+
+
+
+
