@@ -6,7 +6,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import groupSkating from './image/group-skating.jpg'
 import downhillSkateboarder from './image/electric_skateboard_hill.jpg';
-import longBoards from './image/motorized-longboards.jpg';
+// import longBoards from './image/motorized-longboards.jpg';
+import longBoards from './image/riding-longboards.jpg';
 import downhillCarve from './image/boarding-down-road.jpg';
 
 function Homepage() {

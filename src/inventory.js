@@ -9,7 +9,7 @@ const inventory ={
     topSpeed: "16mph",
     price:"950.00",
     qty:"100",
-    img:"",
+    img:"/img/boards/onewheel-pint.jpg",
     color:"dark grey",
     reviews:[]
   },
@@ -23,7 +23,7 @@ const inventory ={
     topSpeed:"19 mph",
     price:"1799.00",
     qty:"50",
-    img:"",
+    img:"/img/boards/onewheel-xr.jpg",
     color:"black, red, yellow, magenta, cyan",
     reviews: []
   },
@@ -37,8 +37,8 @@ const inventory ={
     topSpeed:"22 mph",
     price:"1499.00",
     qty:"20",
-    img:"",
-    color:"",
+    img:"/img/boards/boosted-v2-plus.jpg",
+    color:"black",
     reviews:[]
   },
   {
@@ -51,7 +51,7 @@ const inventory ={
     topSpeed:"22 mph",
     price:"1699.00",
     qty:"50",
-    img:"",
+    img:"/img/boards/evolve-at.jpg",
     color:"wood finish",
     reviews:[]
   },
@@ -65,7 +65,7 @@ const inventory ={
     topSpeed:"26 mph",
     price:"1699.00",
     qty:"50",
-    img:"",
+    img:"/img/boards/evolve-street.jpg",
     color:"wood finish",
     reviews:[]
   },
@@ -79,7 +79,7 @@ const inventory ={
     topSpeed:"28 mph",
     price:"389.00",
     qty:"50",
-    img:"",
+    img:"/img/boards/meepo-v3.jpg",
     color:"black",
     reviews:[]
   },
@@ -92,8 +92,8 @@ const inventory ={
     range:"20 miles",
     topSpeed:"29 mph",
     price:"",
-    qty:"",
-    img:"",
+    qty:"50",
+    img:"/img/boards/meepo-nls-pro.jpg",
     color:"black",
     reviews:[]
   },
@@ -107,7 +107,7 @@ const inventory ={
     topSpeed:"34 mph",
     price:"799.00",
     qty:"30",
-    img:"",
+    img:"/img/boards/",
     color:"black",
     reviews:[]
   },{
@@ -120,7 +120,7 @@ const inventory ={
     topSpeed:"26 mph",
     price:"529.00",
     qty:"50",
-    img:"",
+    img:"/img/boards/",
     color:"black",
     reviews:[]
   },
@@ -134,7 +134,7 @@ const inventory ={
     topSpeed:"25 mph",
     price:"799.00",
     qty:"100",
-    img:"",
+    img:"/img/boards/ownboard-at1w.jpg",
     color:"wood finish",
     reviews:[]
   }
@@ -145,7 +145,7 @@ const inventory ={
     brand:"Onewheel",
     type:"all-terrain",
     price:"950.00",
-    img:"/img/onewheel-pint.jpg"
+    img:"/img/boards/onewheel-pint.jpg"
   },
   {
     id:"1wheelxr",
@@ -153,7 +153,7 @@ const inventory ={
     brand:"Onewheel",
     type:"all-terrain",
     price:"1799.00",
-    img:"/img/onewheel-xr.jpg"
+    img:"/img/boards/onewheel-xr.jpg"
   },
   {
     id:"boostv2plus",
@@ -161,7 +161,7 @@ const inventory ={
     brand:"Boosted",
     type:"street",
     price:"1499.00",
-    img:"/img/boosted-v2-plus.jpg"
+    img:"/img/boards/boosted-v2-plus.jpg"
   },
   {
     id:"evolveat",
@@ -169,7 +169,7 @@ const inventory ={
     brand:"Evolve",
     type:"all-terrain",
     price:"1699.00",
-    img:"/img/evolve-at.jpg"
+    img:"/img/boards/evolve-at.jpg"
   },
   {
     id:"evolvestreet",
@@ -177,7 +177,7 @@ const inventory ={
     brand:"Evolve",
     type:"street",
     price:"1699.00",
-    img:"/img/evolve-street.jpg"
+    img:"/img/boards/evolve-street.jpg"
   },
   {
     id:"meepov3",
@@ -185,7 +185,7 @@ const inventory ={
     brand:"Meepo",
     type:"street",
     price:"389.00",
-    img:"/img/meepo-v3.jpg"
+    img:"/img/boards/meepo-v3.jpg"
   },
   {
     id:"meeponlspro",
@@ -193,7 +193,7 @@ const inventory ={
     brand:"Meepo",
     type:"street",
     price:"689.00",
-    img:"/img/meepo-nls-pro.jpg",
+    img:"/img/boards/meepo-nls-pro.jpg",
   },
   {
     id:"meepoawd",
@@ -201,14 +201,14 @@ const inventory ={
     brand:"Meepo",
     type:"all-terrain",
     price:"799.00",
-    img:"/img/meepo-awd.jpg"
+    img:"/img/boards/meepo-awd.jpg"
      },{
     id:"ownw2",
     name:"Ownboard W2",
     brand:"Ownboard",
     type:"street",
     price:"529.00",
-    img:"/img/ownboard-w2.jpg"
+    img:"/img/boards/ownboard-w2.jpg"
   },
   {
     id:"ownat1w",
@@ -216,7 +216,7 @@ const inventory ={
     brand:"Ownboard",
     type:"all-terrain",
     price:"799.00",
-    img:"/img/ownboard-at1w.jpg"
+    img:"/img/boards/ownboard-at1w.jpg"
   }
   
   
