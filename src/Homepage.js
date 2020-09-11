@@ -7,6 +7,7 @@ import Col from 'react-bootstrap/Col';
 import groupSkating from './image/group-skating.jpg'
 import downhillSkateboarder from './image/electric_skateboard_hill.jpg';
 import longBoards from './image/motorized-longboards.jpg';
+import downhillCarve from './image/boarding-down-road.jpg';
 
 function Homepage() {
   return (
@@ -42,11 +43,23 @@ function Homepage() {
 
       </div>
 
-      <div className="home-box p-4">
+      <div className=" p-4">
         <h4>SHOP BY COMPANY:</h4>
         <hr></hr>
         <CompanyBox />
       </div>
+
+      <div className="header-box">
+        <img className="middle-img img-fluid" src={downhillCarve} alt="people carving on boards"></img>
+        <div className="px-4 middle-text">
+          <h2>RIDE WITH CONFIDENCE.</h2>
+          <p className="w-75 m-auto">
+            We only distribute boards we have personally tested and reviewed. Our boards come with a 60 day warranty, 
+            24/7 Customer assistance, and full refund if the board isn't up to your standards. </p>
+        </div>
+      </div>
+
+      
       <div className="home-box p-4">
         <h4>CUSTOMER REVIEWS:</h4>
         <hr></hr>
@@ -55,7 +68,7 @@ function Homepage() {
           <Reviews />
         </Col>
         <Col sm="12" md="6">
-          <img className="img-fluid" src={longBoards} alt="downhill jam"></img>
+          <img className="img-fluid" src={longBoards} alt="longboards together"></img>
         </Col>
 
       </Row>
