@@ -6,7 +6,8 @@
 .App {
   min-height: 100vh;
   text-align: center;
-  background-color:white
+  background-color:white;
+  position: relative;
 
 }
 
@@ -15,6 +16,17 @@ h2 {
 }
 h4 {
   font-family: 'Alata', sans-serif;
+}
+
+.btn {
+  transition: all 150ms ease-in;
+  font-weight: bold !important;
+}
+
+.btn:hover {
+  background-color: orange !important;
+  color: black !important;
+  
 }
 
 
