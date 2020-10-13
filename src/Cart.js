@@ -4,26 +4,16 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import './Cart.css';
 import CartItem from './CartItem';
+import {useSelector} from 'react-redux';
+import {useHistory} from 'react-router-dom';
+
 
 // cart page, displaying cart item components 
 // for items that are currently inside cart store.
 
 function Cart() {
-  const shoppingCart = [{
-    id: "ownat1w",
-    name: "Ownboard AT1W",
-    brand: "Ownboard",
-    price: "799.00",
-    img: "/img/boards/ownboard-at1w.jpg",
-    qty: 1
-  }, {
-    id: "meeponlspro",
-    name: "Meepo NLS Pro",
-    brand: "Meepo",
-    price: "689.00",
-    img: "/img/boards/meepo-nls-pro.jpg",
-    qty: 1
-  }];
+  const shoppingCart = useSelector(store => store.cart);
+  const history = useHistory();
 
   const shoppingList = shoppingCart.map(p => 
     (
@@ -38,6 +28,14 @@ function Cart() {
     </Col>
   ))
 
+  function keepShopping(){
+    history.push("/shop")
+  }
+
+  function checkOut(){
+    history.push("/checkout")
+  }
+
 
   return (
     <div className="App">
@@ -47,8 +45,8 @@ function Cart() {
           {shoppingList}
         </Row>
         <div className="text-right mt-3">
-          <Button variant="dark" className="mx-1">Keep Shopping</Button>
-          <Button variant="dark">Checkout</Button>
+          <Button onClick={keepShopping} variant="dark" className="mx-1">Keep Shopping</Button>
+          <Button onClick={checkOut} variant="dark">Checkout</Button>
         </div>
       </div>
     </div>
