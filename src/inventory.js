@@ -107,7 +107,7 @@ const inventory ={
     topSpeed:"34 mph",
     price:"799.00",
     qty:"30",
-    img:"/img/boards/",
+    img:"/img/boards/meepo-awd.jpg",
     color:"black",
     reviews:[]
   },{
@@ -120,7 +120,7 @@ const inventory ={
     topSpeed:"26 mph",
     price:"529.00",
     qty:"50",
-    img:"/img/boards/",
+    img:"/img/boards/ownboard-w2.jpg",
     color:"black",
     reviews:[]
   },

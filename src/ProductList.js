@@ -8,7 +8,7 @@ import ProductCard from './ProductCard';
 function ProductList() {
   const productsBasicArray = inventory.productsSimple;
   let productCards = productsBasicArray.map(p => (
-    <Col md="12" lg="4">
+    <Col md="12" lg="4" xl="3">
       <ProductCard
         product={p}
         key={p.id} />
