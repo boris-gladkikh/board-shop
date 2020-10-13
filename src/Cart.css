@@ -6,3 +6,8 @@
   background: rgb(58, 58, 58);
 }
 
+.subtotal {
+  text-align: right;
+  margin-right: 10px;
+}
+

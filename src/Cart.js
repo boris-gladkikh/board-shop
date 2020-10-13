@@ -9,14 +9,13 @@ import { useHistory } from "react-router-dom";
 
 /**
  * TODO: make cart responsive (breaks on smaller screens)
- * add subtotal to cart, showing subtotal of all
- * cart page, displaying cart item components for items that are currently inside cart store.
  *
  */
 
 function Cart() {
   const shoppingCart = useSelector((store) => store.cart);
   const history = useHistory();
+  const currentSubtotal = useSelector(store => store.subtotal);
 
   const shoppingList = shoppingCart.map((p) => (
     <Col lg="12">
@@ -54,6 +53,9 @@ function Cart() {
       <h2 className="mt-5">MY CART</h2>
       <div className="cart">
         {cartDisplay}
+        <div className="subtotal">
+          <strong className="text-white">Subtotal: ${currentSubtotal}</strong>
+        </div>
         <div className="text-right mt-3">
           <Button onClick={keepShopping} variant="dark" className="mx-1">
             Keep Shopping
