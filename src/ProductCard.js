@@ -3,8 +3,14 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import {NavLink} from 'react-router-dom';
 import './ProductCard.css';
+import {useDispatch} from 'react-redux';
 
 function ProductCard({product}){
+  const dispatch = useDispatch();
+  const addItem = ()=>{
+    dispatch({type:"ADD_ITEM", payload: product})}
+
+
   return(
     <Card className="m-2">
       <NavLink to={`/shop/${product.name}`}>
@@ -12,7 +18,7 @@ function ProductCard({product}){
       </NavLink>
       <p><b>{product.name}</b></p>
       <p><b>By {product.brand} - ${product.price} </b></p>
-      <Button variant="dark">Add To Cart</Button>
+      <Button onClick={addItem} variant="dark">Add To Cart</Button>
     </Card>
   )
 

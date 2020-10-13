@@ -91,7 +91,7 @@ const inventory ={
     type:"street",
     range:"20 miles",
     topSpeed:"29 mph",
-    price:"",
+    price:"689.00",
     qty:"50",
     img:"/img/boards/meepo-nls-pro.jpg",
     color:"black",

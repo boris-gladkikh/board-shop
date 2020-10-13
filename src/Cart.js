@@ -15,11 +15,12 @@ import { useHistory } from "react-router-dom";
 function Cart() {
   const shoppingCart = useSelector((store) => store.cart);
   const history = useHistory();
-  const currentSubtotal = useSelector(store => store.subtotal);
+  const currentSubtotal = useSelector((store) => store.subtotal);
 
   const shoppingList = shoppingCart.map((p) => (
-    <Col lg="12">
+    <Col lg="12" key={p.id}>
       <CartItem
+        product={p}
         key={p.id}
         id={p.id}
         name={p.name}

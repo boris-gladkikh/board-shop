@@ -14,10 +14,10 @@ function ProductDetail() {
   let product = inventory.products.filter((product) => product.name === name);
   product = product[0];
 
-  function keepShopping(){
-    history.push("/shop")
+  function keepShopping() {
+    history.push("/shop");
   }
-  function addToCart(){
+  function addToCart() {
     //#TODO::::
   }
 
@@ -43,16 +43,19 @@ function ProductDetail() {
           <p>{product.range}</p>
           <strong>Top Speed:</strong>
           <p>{product.topSpeed}</p>
+          <strong>Price:</strong>
+          <strong> ${product.price}</strong><br/>
+          <small>(Taxes will be calculated at checkout)</small>
         </Col>
       </Row>
       <div className="text-center mt-3">
-          <Button onClick={keepShopping} variant="dark" className="mx-1">
-            Keep Shopping
-          </Button>
-          <Button onClick={addToCart} variant="dark">
-            Add To Cart
-          </Button>
-        </div>
+        <Button onClick={keepShopping} variant="dark" className="mx-1">
+          Keep Shopping
+        </Button>
+        <Button onClick={addToCart} variant="dark">
+          Add To Cart
+        </Button>
+      </div>
     </div>
   );
 }
