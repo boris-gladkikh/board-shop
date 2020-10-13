@@ -5,6 +5,9 @@ import App from './App';
 import 'bootstrap/dist/css/bootstrap.css';
 import * as serviceWorker from './serviceWorker';
 
+import rootReducer from './rootReducer';
+import useSelector from 'react-redux';
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

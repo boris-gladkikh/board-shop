@@ -29,6 +29,7 @@ function Cart() {
     (
     <Col lg="12" >
       <CartItem 
+      key={p.id}
       id={p.id}
       name={p.name}
       price={p.price}
@@ -49,8 +50,6 @@ function Cart() {
           <Button variant="dark" className="mx-1">Keep Shopping</Button>
           <Button variant="dark">Checkout</Button>
         </div>
-
-
       </div>
     </div>
   )

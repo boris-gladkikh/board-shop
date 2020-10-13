@@ -45,7 +45,7 @@ function Homepage() {
       </div>
 
       <div className=" p-4">
-        <h4>SHOP BY COMPANY:</h4>
+        <h4>SHOP BY BRAND:</h4>
         <hr></hr>
         <CompanyBox />
       </div>
