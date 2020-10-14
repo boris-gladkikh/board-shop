@@ -37,17 +37,19 @@ function rootReducer(state = INITIAL_STATE, action) {
       //     };
       //   }
       // }
-      return {
+      let y =   {
         ...state,
         cart: [...state.cart, payload],
-        subtotal: state.subtotal + Number(payload.price),
+        subtotal: state.subtotal + Number(payload.price)
       };
+      console.log(y)
+      return y
 
     case "REMOVE_ITEM":
       return {
         ...state,
-        cart: [...state.cart.filter((product) => product.id !== payload.id)],
-        subtotal: state.subtotal - Number(payload.price),
+        cart: [...state.cart.filter(product => product.cartId !== payload.cartId)],
+        subtotal: state.subtotal - Number(payload.price) 
       };
 
     default:

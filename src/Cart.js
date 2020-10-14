@@ -6,10 +6,10 @@ import "./Cart.css";
 import CartItem from "./CartItem";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
+import { v4 as uuid } from 'uuid';
 
 /**
- * TODO: make cart responsive (breaks on smaller screens)
- *
+ * cart component, gnerating either a list of cart items in the cart store,  or "shopping cart is empty" if empty
  */
 
 function Cart() {
@@ -21,7 +21,7 @@ function Cart() {
     <Col lg="12" key={p.id}>
       <CartItem
         product={p}
-        key={p.id}
+        key={uuid()}
         id={p.id}
         name={p.name}
         price={p.price}

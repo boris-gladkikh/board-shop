@@ -5,21 +5,30 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import "./ProductDetail.css";
+import {useDispatch} from 'react-redux';
+import { v4 as uuid } from 'uuid';
+
 
 //detail component displaying detailed description of product, with purchase button
 
 function ProductDetail() {
+  const dispatch = useDispatch();
   const history = useHistory();
   const { name } = useParams();
   let product = inventory.products.filter((product) => product.name === name);
   product = product[0];
 
+  function addItem (){
+    let productInCart = {...product, cartId: uuid()}
+    console.log("in cart item", productInCart);
+    dispatch({ type: "ADD_ITEM", payload: productInCart})
+  }
+
+
   function keepShopping() {
     history.push("/shop");
   }
-  function addToCart() {
-    //#TODO::::
-  }
+
 
   return (
     <div className="App p-4">
@@ -52,7 +61,7 @@ function ProductDetail() {
         <Button onClick={keepShopping} variant="dark" className="mx-1">
           Keep Shopping
         </Button>
-        <Button onClick={addToCart} variant="dark">
+        <Button onClick={addItem} variant="dark">
           Add To Cart
         </Button>
       </div>
