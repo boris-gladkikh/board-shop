@@ -19,25 +19,36 @@
 
 const INITIAL_STATE = {
   cart: [],
-  subtotal: 0
-}
+  subtotal: 0,
+};
 
 //initial state holds cart with array of item objects - hardcoded initial state for now
 
 function rootReducer(state = INITIAL_STATE, action) {
   let payload = action.payload;
   switch (action.type) {
-
     case "ADD_ITEM":
-      for(let i = 0; i < state.cart.length; i++){
-        if(state.cart[i].id ===  payload.id){
-          return {...state, cart:[...state.cart, state.cart[i].qty  = state.cart[i].qty + 1]}
-        }
-      }
-      return {...state, cart : [...state.cart, payload ]};
+      // for (let i = 0; i < state.cart.length; i++) {
+      //   if (state.cart[i].id === payload.id) {
+      //     return {
+      //       ...state,
+      //       cart: [...state.cart, state.cart[i].qty = state.cart[i].qty + 1],
+      //       subtotal: state.subtotal + payload.price,
+      //     };
+      //   }
+      // }
+      return {
+        ...state,
+        cart: [...state.cart, payload],
+        subtotal: state.subtotal + Number(payload.price),
+      };
 
     case "REMOVE_ITEM":
-      return {...state, cart: [...state.cart.filter(product => product.id !== payload.id)]};
+      return {
+        ...state,
+        cart: [...state.cart.filter((product) => product.id !== payload.id)],
+        subtotal: state.subtotal - Number(payload.price),
+      };
 
     default:
       return state;
