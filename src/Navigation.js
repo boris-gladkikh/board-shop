@@ -13,7 +13,7 @@ function Navigation() {
   const cartLength = useSelector(store => store.cart.length);
 
   return (
-    <Navbar className="bg-dark  ">
+    <Navbar className="bg-dark " id="nav">
       <Navbar.Brand className="text-white" href="/">FS</Navbar.Brand>
       <Nav className="ml-auto">
         <Nav.Item className="mx-2">

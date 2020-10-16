@@ -1,4 +1,6 @@
-
+.img-link {
+  transition: 300ms all;
+}
 .img-link:hover{
   filter:brightness(60%);
 }
