@@ -9,17 +9,31 @@ const INITIAL_STATE = {
   body:""
 }
 
-function ContactForm(){
-  // const [formData, setFormData] = useState({...INITIAL_STATE});
+//contact form component, for now just mocks form submission without a backend
 
-  function handleChange(){}
-  function handleSubmit(){}
+function ContactForm(){
+  const [formData, setFormData] = useState({...INITIAL_STATE});
+  
+    //TODO: will set up contact database in the backend - for now just logs form
+    function handleSubmit(){
+      console.log("Submitted form data:",formData);
+      
+    }
+
+  function handleChange(evt) {
+    let {name, value} = evt.target;
+    setFormData(currentData => ({
+      ...currentData,
+      [name]: value
+    }));
+  
+  }
   return(
-    <Form className="w-75 m-auto p-5 text-left">
+    <Form onSubmit={handleSubmit} className="w-75 m-auto p-5 text-left">
       <Form.Group>
       <Form.Text>Note: all fields are required!</Form.Text>
       </Form.Group>
-      <Form.Group onSubmit={handleSubmit}>
+      <Form.Group >
         <Form.Label htmlFor="name">Name:</Form.Label>
         <Form.Control required id="name" name="name" onChange={handleChange} placeholder="Ex: Bruce Wayne" />
       </Form.Group>
