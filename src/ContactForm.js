@@ -15,7 +15,8 @@ function ContactForm(){
   const [formData, setFormData] = useState({...INITIAL_STATE});
   
     //TODO: will set up contact database in the backend - for now just logs form
-    function handleSubmit(){
+    function handleSubmit(evt){
+      evt.preventDefault();
       console.log("Submitted form data:",formData);
       
     }

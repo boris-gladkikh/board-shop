@@ -14,7 +14,7 @@ function Footer(){
 <div className="px-5 w-50 m-auto addy">
   Flowstate Boards <br/>
   10232 Mountain Blvd. <br/>
-  Oakland, CA 94605 <br/>
+  Oakland, CA 94605 <br/><br/><hr />
   This is a demo site created by Boris Gladkikh. <br />
   You can't actually buy any of these products here.
 </div>
