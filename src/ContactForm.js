@@ -10,7 +10,7 @@ const INITIAL_STATE = {
 }
 
 function ContactForm(){
-  const [formData, setFormData] = useState({...INITIAL_STATE});
+  // const [formData, setFormData] = useState({...INITIAL_STATE});
 
   function handleChange(){}
   function handleSubmit(){}
