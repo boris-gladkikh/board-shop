@@ -3,7 +3,7 @@ import "./CheckoutForm.css";
 import Button from "react-bootstrap/Button";
 // import ErrorHandler from "./ErrorHandler";
 
-function CheckoutForm({ type }) {
+function CheckoutForm({ type, setFormType }) {
   let initFormData = {
     first_name: "",
     last_name: "",
@@ -19,13 +19,14 @@ function CheckoutForm({ type }) {
     let { name, value } = evt.target;
     setFormData((data) => ({
       ...data,
-      name: value,
+      [name]: value,
     }));
   }
   function handleSubmit(evt) {
     evt.preventDefault();
     console.log("this is form data on submit", formData);
     setFormData({ initFormData });
+    setFormType("Billing");
   }
 
   return (

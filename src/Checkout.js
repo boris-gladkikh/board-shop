@@ -19,11 +19,13 @@ function Checkout() {
 
 
 
+
+
   return (
     <div className="App">
       <h2>CHECKOUT</h2>
       <div className="checkout-container">
-        <CheckoutForm type={formType} />
+        <CheckoutForm type={formType} setFormType={setFormType} />
         <CheckoutCart  />
       </div>
     </div>
