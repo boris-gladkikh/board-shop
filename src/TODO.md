@@ -1,13 +1,14 @@
 
 FRONTEND
 
--Breadcrumbs for checkout
-
--checkout flow:
-  -once form is complete, credit card form pops up.
-  -once credit card goes through, order confirmation comes through!
-
--filter search shop
+##checkout flow:
+  -Breadcrumbs for checkout
+  -checkout cart
+  -checkout cart items component
+  -regular cart item component
+  -checkout-after: make a "your order is on the way" page 
+ 
+##filter search shop
   -create search bar, 
   -filter by type, brand
   -retool sites so they take filter cocditions as props
