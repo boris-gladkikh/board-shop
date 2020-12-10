@@ -12,7 +12,7 @@ let initialCreditCardData = {
   number: "",
 };
 
-function CheckoutCreditCardForm() {
+function CheckoutCreditCardForm({setCheckoutAfter}) {
   const [formData, setFormData] = useState({ ...initialCreditCardData });
 
   let handleFocus = (e) => {
@@ -33,6 +33,7 @@ function CheckoutCreditCardForm() {
 
   let handleSubmit = (evt) => {
     console.log("sending cc data to confirm payment", formData);
+    setCheckoutAfter(true);
   };
 
   return (
@@ -77,8 +78,14 @@ function CheckoutCreditCardForm() {
           ></input>
         </label>
         <br />
-        <label>
-          <input></input>
+        <label htmlFor="cvc">
+          <input
+            onChange={handleChange}
+            onFocus={handleFocus}
+            name="cvc"
+            type="text" 
+            placeholder="CVC"
+          ></input>
         </label>
         <br />
         <Button variant="dark" type="submit">

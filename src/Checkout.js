@@ -3,6 +3,7 @@ import CheckoutForm from "./CheckoutForm";
 import CheckoutCart from "./CheckoutCart";
 import "./Checkout.css";
 import CheckoutCreditCardForm from "./CheckoutCreditCardForm";
+import CheckoutAfter from "./CheckoutAfter";
 
 /*
  * TODO::
@@ -17,20 +18,28 @@ import CheckoutCreditCardForm from "./CheckoutCreditCardForm";
 
 function Checkout() {
   let [showCC, setShowCC] = useState(false);
+  let [showCheckoutAfter, setShowCheckoutAfter] = useState(false);
 
+
+if(showCheckoutAfter){
+  return(
+    <div className="App">
+    <h2>CHECKOUT</h2>
+      <CheckoutAfter />
+  </div>
+
+  )
+}
 
 if(showCC){
   return(
     <div className="App">
     <h2>CHECKOUT</h2>
     <div className="checkout-container">
-      <CheckoutCreditCardForm />
+      <CheckoutCreditCardForm setCheckoutAfter={setShowCheckoutAfter} />
       <CheckoutCart  />
-
-
     </div>
   </div>
-
   )
 }
 
