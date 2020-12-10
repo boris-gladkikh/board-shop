@@ -7,19 +7,23 @@ import "./CheckoutCreditCardForm.css";
 let initialCreditCardData = {
   cvc: "",
   expiry: "",
-  focus: "",
+  focus:"",
   name: "",
   number: "",
 };
 
 function CheckoutCreditCardForm({setCheckoutAfter}) {
   const [formData, setFormData] = useState({ ...initialCreditCardData });
+  const [focus, setFocus] = useState({focus:""});
 
-  let handleFocus = (e) => {
-    setFormData((data) => ({
-      ...data,
-      focus: e.target.name,
-    }));
+
+  //TODO: figure out why cvc won't turn unless you do the incorrect state and "focused" change
+  let handleFocus = (evt) => {
+     setFocus({focus:evt.target.name});
+    // setFormData(d=>({
+    //   ...d,
+    //   focus:evt.target.name
+    // }));
   };
 
   let handleChange = (e) => {
@@ -43,7 +47,7 @@ function CheckoutCreditCardForm({setCheckoutAfter}) {
       <Cards
         cvc={formData.cvc}
         expiry={formData.expiry}
-        focused={formData.focus}
+        focused={focus}
         name={formData.name}
         number={formData.number}
       />
@@ -56,6 +60,7 @@ function CheckoutCreditCardForm({setCheckoutAfter}) {
             name="number"
             type="tel"
             placeholder="Card Number"
+            value={formData.number}
           ></input>
         </label>{" "}
         <br />
@@ -66,6 +71,8 @@ function CheckoutCreditCardForm({setCheckoutAfter}) {
             name="name"
             type="text"
             placeholder="Full Name"
+            value={formData.name}
+
           ></input>
         </label>
         <label htmlFor="expiry">
@@ -75,6 +82,8 @@ function CheckoutCreditCardForm({setCheckoutAfter}) {
             name="expiry"
             type="text" // make custom month, year input
             placeholder="Expiration"
+            value={formData.expiry}
+
           ></input>
         </label>
         <br />
@@ -85,6 +94,8 @@ function CheckoutCreditCardForm({setCheckoutAfter}) {
             name="cvc"
             type="text" 
             placeholder="CVC"
+            value={formData.cvc}
+
           ></input>
         </label>
         <br />

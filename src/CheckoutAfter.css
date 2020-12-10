@@ -3,6 +3,13 @@
   width: 95%;
   color: white;
   background:tomato;
-  padding: 2rem;
+  padding: 1rem;
   margin: auto;
+  overflow:hidden;
+}
+
+@media screen and (max-width: 1000px){
+  .checkout-after-container{
+    width: 100%;
+  }
 }

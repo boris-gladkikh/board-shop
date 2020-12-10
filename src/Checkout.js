@@ -17,7 +17,7 @@ import CheckoutAfter from "./CheckoutAfter";
  */
 
 function Checkout() {
-  let [showCC, setShowCC] = useState(false);
+  let [showCC, setShowCC] = useState(true);
   let [showCheckoutAfter, setShowCheckoutAfter] = useState(false);
 
 
