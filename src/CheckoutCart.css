@@ -1,0 +1,26 @@
+.checkout-cart {
+  background: rgb(58, 58, 58);
+  padding: 1rem;
+  color:white;
+  position: relative;
+  width: 95%;
+  margin: auto;
+  height: 100%;
+
+}
+
+.checkout-cart h3 {
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.checkout-cart ul {
+  list-style: none;
+}
+
+.subtotal {
+  text-align: right;
+  border: 1px solid white;
+  padding: 5px;
+  justify-self: end;
+}
