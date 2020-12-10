@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import CheckoutForm from "./CheckoutForm";
 import CheckoutCart from "./CheckoutCart";
 import "./Checkout.css";
+import CheckoutCreditCardForm from "./CheckoutCreditCardForm";
 
 /*
  * TODO::
@@ -15,8 +16,23 @@ import "./Checkout.css";
  */
 
 function Checkout() {
-  let [formType, setFormType] = useState("Billing");
+  let [showCC, setShowCC] = useState(false);
 
+
+if(showCC){
+  return(
+    <div className="App">
+    <h2>CHECKOUT</h2>
+    <div className="checkout-container">
+      <CheckoutCreditCardForm />
+      <CheckoutCart  />
+
+
+    </div>
+  </div>
+
+  )
+}
 
 
 
@@ -25,7 +41,7 @@ function Checkout() {
     <div className="App">
       <h2>CHECKOUT</h2>
       <div className="checkout-container">
-        <CheckoutForm type={formType} setFormType={setFormType} />
+        <CheckoutForm setShowCC={setShowCC}/>
         <CheckoutCart  />
       </div>
     </div>
